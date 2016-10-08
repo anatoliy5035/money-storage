@@ -13,28 +13,31 @@
 //  position: absolute
 //  transform: translate(-270px,0)
 
+.main-page-wr
+  background: #E0EEEF
 
 .main-page
   background: $bg
-  padding-top: 50px
-  padding-bottom: 54px
+  padding-top: 20px
+  padding-bottom: 11px
   padding-left: 15px
   padding-right: 15px
-  +r(320)
-    padding-top: 14px
-    padding-bottom: 18px
+
+  button
+    padding: 14px 16%
 
 .main-logo
   width: 80%
   margin: 0 auto
   margin-bottom: 30px
   +r(480)
-    width: 45%
+    width: 75%
 
   +r(320)
     margin-bottom: 15px
   img
     margin: 0 auto
+    display: block !important
 
 
 .sign-block
@@ -56,11 +59,13 @@
     margin: 0 auto
 
 .sign-block__head
-  padding: 18px 0
+  padding: 6px 0
   background-color: #F4F4F4
   text-align: center
   +r(480)
     padding: 11px -0px
+  .grey-title
+    text-align: center
 
 .info-text
   color: black
@@ -118,16 +123,12 @@
 
 
 .sign-block__body
-  padding: 40px 0 34px 0
-  margin-bottom: 57px
-  +r(320)
-    margin-bottom: 15px
+  padding: 21px 0 34px 0
+  margin-bottom: 12px
   .title-red
-    margin-bottom: 48px
-    +r(480)
-      margin-bottom: 15px
+    margin-bottom: 12px
   .info-text
-    margin-bottom: 100px
+    margin-bottom: 25px
     +r(480)
       margin-bottom: 15px
 
@@ -136,7 +137,7 @@
   text-align: center
   position: relative
   height: 60px
-  .back
+  .back, .lang
     position: absolute
     left: 0
     top: 0
@@ -173,9 +174,10 @@
     height: 0
     font-size: 0
     text-align: center
+    +clr
 
   li
-    display: inline-block
+    float: left
     width: 25%
   a
     text-decoration: none
@@ -191,8 +193,7 @@
 
 
     &:hover
-      //border-bottom: 4px solid white
-    color: #e7ffe4
+      //border-bottom: 4px solid whit
 
     &.active-link
       border-bottom: 4px solid white
@@ -208,15 +209,13 @@
   padding: 0 10px
   width: 80%
   margin: 0 auto
-  position: absolute
+  text-align: center
   top: 37%
   left: 50%
-  transform: translate( -50%)
-  text-align: center
   +r(320)
     width: 90%
   +rh(480)
-    width: 90%
+
 
 
 
@@ -247,44 +246,53 @@
 
 
 .bottom-button
-  //position: absolute
-  //bottom: 9%
-  //left: 50%
-  //width: 80%
+  margin: 0 auto
   text-align: center
-  //transform: translate(-50%)
+  padding-top: 59px
+  padding-bottom: 26px
 
 
+//.static
+//  transform: translate(0)
+//  position: static
 
 .bottom-button
-  position: absolute
-  bottom: 13%
-  width: 80%
-  left: 50%
-  transform: translate(-50%, 0)
+  &.static
+    padding: 47px 0
 
-  +rh(480)
-    bottom: 9%
+
+  +rh(548)
+    position: static
+    padding: 40px 0
+    transform: translate(0)
+
 
   .button
-    padding: 14px 16%
-    //width: 100%
+    padding: 16px 16%
+    display: block
+    width: 100%
+    box-sizing: border-box
+    text-transform: uppercase
+    +rh(480)
+      padding: 14px 16%
 
 
 .title-t
   text-align: center
   padding-top: 40px
   font-weight: 500
+  font-family: 'RobotoMediun'
   +fs(26)
   +rh(480)
     padding-top: 20px
 
-input, select
+.input-border
   height: 52px
   width: 100%
   display: block
   padding-left: 15px
   border-bottom: 4px solid $main
+  +fs(24)
 
 option
   color: black
@@ -293,6 +301,9 @@ option
   border: 0
   border-bottom: 4px solid $main
   color: darkgrey
+
+.red-drop
+  color: $main
 
 .inputs
   input
@@ -321,7 +332,7 @@ option
   +rh(480)
     margin-bottom: 20px
 
-.currency-page
+.currency-page, .bank-accounts
   .add-ham
     width: 100%
     left: 0
@@ -338,12 +349,14 @@ option
 
 
 .list-of-currency
-  margin-top: 8px
-  margin-bottom: 5px
+  padding-left: 72px
+  padding-right: 71px
   overflow-y: scroll
   height: calc(100vh - 233px)
   +rh(480)
     height: calc(100vh - 193px)
+  +r(768)
+    height: calc(629px - 233px)
   li
     display: block
     padding-left: 80px
@@ -366,18 +379,22 @@ option
     font-size: 40px
 
 .header
-  position: fixed
+  min-width: 320px
+  position: absolute
   left: 0
   right: 0
   top: 0
-  z-index: 50
+  +r(767)
 
-.currency-page
-  height: initial !important
+
+
+.currency-page, .bank-accounts
+  //height: initial !important
   .add-ham
     background: #F2F2F2
     z-index: 500
     +rh(480)
+
 
 
 .name-currency
@@ -407,15 +424,32 @@ option
   box-shadow: 0px 3px 12px -2px rgba(124, 126, 125, 0.68)
   background: white
   padding: 34px 0 17px 0
+  +clr
+  &.custom
+    padding-left: 35px
+    padding-right: 35px
+    padding-top: 17px
+    padding-bottom: 30px
+    .step-top-title
+      margin-bottom: 25px
+    .step-bottom-ttitle
+      margin-bottom: 10px
+
   +rh(480)
     padding: 13px 0 6px 0
 
-
+.balanse-page
+  //overflow: scroll !important
+  .bottom-panel
+    position: static
+    margin-top: 40px
+  .second-title-left
+    padding-left: 27px
 
 .second-title-left
   font-weight: 500
+  font-family: 'RobotoMediun'
   color: #3D3D3D
-  padding-left: 27px
 
   +fs(24)
 
@@ -434,6 +468,7 @@ option
 
     .currency-name
       font-weight: 500
+      font-family: 'RobotoMediun'
       +fs(25)
     .val
       font-weight: 400
@@ -441,7 +476,7 @@ option
       color: $main-sec
       +fs(100)
       +rh(480)
-        font-size: 4.14rem
+        font-size: 5.14rem
     span
       display: inline-block
       color: $main-sec
@@ -474,7 +509,7 @@ option
   font-size: 60px !important
   margin-bottom: 10px
   +rh(480)
-    font-size: 35px
+    font-size: 50px !important
 
 .bottom-panel
   position: absolute
@@ -483,7 +518,7 @@ option
   right: 0
   background: white
   table-layout: fixed
-  +r(360)
+  +r(320)
     position: static
     margin-top: 40px
 
@@ -494,6 +529,8 @@ option
     color: #7F7F7F
     +fs(20)
     display: block
+    +rh(480)
+      font-size: 1.3rem
 
 
   tr,td
@@ -501,11 +538,750 @@ option
 
   td
     vertical-align: middle
-    padding: 2%
+    //padding: 2%
 
-.sucess-vust
-  .title-red
-    margin-bottom: 10px
 
 .icon-credit-card, .icon-handshake
   font-size: 100px
+
+.portmone-info-page
+  //height: initial !important
+
+
+
+.info-block-wrapp
+  overflow-y: scroll
+  +rh(480)
+    overflow: auto
+    //height: initial
+
+
+
+.with-panel
+  overflow: hidden !important
+  +rh(480)
+    overflow: scroll !important
+
+
+.with-panel .info-block-wrapp
+  +rh(480)
+    height: inherit !important
+    overflow: initial
+
+.with-panel .bottom-panel
+  position: fixed
+  margin-top: 0
+  bottom: 15px !important
+  //display: none
+  +rh(480)
+    position: static
+    margin-top: 40px
+
+    //height: 165px
+
+
+.portmone-info-page
+  .second-title-left
+    margin-bottom: 15px
+    font-weight: 500
+    font-family: 'RobotoMediun'
+  .main-second-block
+    padding: 20px
+    padding-right: 35px
+
+.port-info
+  table-layout: fixed
+  +fs(22)
+  td
+    padding-bottom: 10px
+    position: relative
+
+.change-port
+  display: inline-block
+
+.history
+  margin-bottom: 25px
+  table-layout: fixed
+  .date
+    text-align: right
+    +fs(18)
+    color: #474747
+  td
+    vertical-align: middle
+
+.history-wrap
+  margin-right: 15px
+  margin-left: 15px
+
+.history-title
+  padding-left: 30px
+//
+//.history-value
+//  display: inline-block
+
+.history-container
+  margin-top: 15px
+  background: white
+  padding-top: 25px
+  padding-bottom: 40px
+  box-shadow: 0px 3px 12px -2px rgba(124, 126, 125, 0.68)
+
+.ico-history
+  width: 50px
+  height: 50px
+  display: block
+  background-position: center center
+  //background-image: url(../img/send.png)
+  background-size: contain
+  margin: 0 auto
+  background-repeat: no-repeat
+
+
+.ico-to
+  background-image: url(../img/transfer.svg)
+.ico-add-portmone
+  background-image: url(../img/add-portmone.svg)
+.ico-deal
+  background-image: url(../img/deal.svg)
+.ico-exchange
+  background-image: url(../img/exchange.svg)
+.ico-fill
+  background-image: url(../img/fill.svg)
+.ico-get-commision
+  background-image: url(../img/transfer.svg)
+.ico-get-money
+  background-image: url(../img/get-money.svg)
+.ico-return-commision
+  background-image: url(../img/return-commision.svg)
+.ico-transfer
+  background-image: url(../img/transfer.svg)
+.ico-transfer-send
+  background-image: url(../img/transfer-send.svg)
+.ico--vust
+  background-image: url(../img/vust.svg)
+
+    
+  
+
+.nav-buttons
+  display: flex
+  justify-content: space-around
+  width: 80%
+  margin: 0 auto
+
+.navigate-button
+  display: inline-block
+  background: transparent
+  position: relative
+  //font-weight: 500
+  font-family: 'RobotoMediun'
+  color: $main
+  +fs(22)
+  .icon-tri
+    margin: 0 9px
+    font-size: 10px
+
+.later
+  .icon-tri
+    +rotate(180)
+
+.grey-title
+  text-align: left
+  span
+    color: #6D6D6D
+    +fs(22)
+
+.icon-pencil-edit-button
+  position: absolute
+  right: 0
+  top: 0
+  color: #777777
+
+.name-port-info
+  padding-right: 20px
+
+.value-info
+  .balance, .available
+    color: $main
+
+.name-company
+  +fs(22)
+  color: #474747
+
+.action
+  +fs(18)
+  color: #474747
+
+.history-value
+  +fs(22)
+  color: $main
+  text-align: right
+  width: 27%
+
+td.ico
+  width: 25%
+
+
+
+.step-page .main-block
+  bottom: 0
+
+.step-page
+  +rh(600)
+    //height: initial !important
+
+  .bottom-button
+    width: 100%
+    //+rh(576)
+    //  position: static
+    //  //margin-top: 35px
+    //  transform: translate(0)
+
+    button
+      width: 90%
+
+.main-block-third
+  width: 90%
+  top: 132px
+  text-align: left
+
+  +rh(480)
+    position: static
+    transform: translate(0)
+    //margin-top: 25px
+    padding-top: 30px
+    padding-bottom: 35px
+
+
+
+.input-form
+  border: 1px solid #c5c5c5
+  border-radius: 4px
+  display: block
+  width: 100%
+  height: 37px
+  padding-left: 23px
+  margin-bottom: 14px
+  color: #424242
+  position: relative
+  +fs(26)
+
+.type-second-input
+  &:focus
+    border-color: $main
+
+.input-form::-webkit-input-placeholder
+  color: #424242
+
+.input-form::-moz-placeholder
+  color: #424242
+
+.input-form:-ms-input-placeholder
+  color: #424242
+
+.step-top-title
+  font-weight: 500
+  font-family: 'RobotoMediun'
+  color: #3d3d3d
+  +fs(26)
+
+.step-bottom-ttitle
+  color: #3d3d3d
+  +fs(45)
+  font-weight: 400
+
+
+.step-page
+
+  .step-top-title
+    //padding-left: 8px
+    margin-bottom: 10px
+  .step-bottom-ttitle
+    margin-bottom: 40px
+    +rh(480)
+      margin-bottom: 20px
+
+.warning-text
+  color: #6d6d6d
+  position: relative
+  +fs(18)
+  padding-left: 26px
+  margin-bottom: 35px
+
+.icon-warning
+  font-size: 20px
+  position: absolute
+  left: 0px
+  color: #3d3d3d
+
+.country-drop
+  background-repeat: no-repeat
+  background-size: 26px
+  background-position: 13px 5px
+  padding-left: 40px !important
+
+.type-input
+  &:focus
+    background: transparent
+
+.type-input:focus::-webkit-input-placeholder
+  color: transparent
+
+.type-input:focus::-moz-placeholder
+  color: transparent
+
+.type-input:focus::-ms-input-placeholder
+  color: transparent
+
+.input-form:focus::-webkit-input-placeholder
+  color: transparent
+
+.input-form:focus::-moz-placeholder
+  color: transparent
+
+.input-form:focus::-ms-input-placeholder
+  color: transparent
+
+.textarea:focus::-webkit-input-placeholder
+  color: transparent
+
+.textarea:focus::-moz-placeholder
+  color: transparent
+
+.textarea:focus::-ms-input-placeholder
+  color: transparent
+
+
+
+
+.step-2
+  button
+    +fs(26)
+    padding: 13px 16%
+
+.icon-bank, .icon-credit-card-
+  font-size: 20px
+
+.check
+  width: 36%
+  height: 36px
+  border: 1px solid #c5c5c5
+  border-radius: 4px
+  padding: 12px
+  position: relative
+  &.active
+    border-color: $main
+  .icon
+    position: absolute
+    left: 10px
+    top: 50%
+    transform: translate(0, -50%)
+  span
+    color: #424242
+    +fs(24)
+    line-height: 1
+    position: relative
+    display: block
+    padding: 0 10px 0 38px
+    text-align: left
+
+
+
+
+.bank-account
+  float: left
+
+.credit-card
+  float: right
+
+.checkbox-wrap
+  text-align: center
+  margin-bottom: 17px
+  +clr
+
+.content-check
+  position: absolute
+  top: 50%
+  transform: translate(0, -50%)
+  right: 0
+  left: 0
+  input
+    position: absolute
+    right: 8px
+    top: 50%
+    transform: translate(0, -50%)
+
+.divide
+  line-height: 60px
+  font-size: 20px
+  color: #424242
+
+.textarea
+  width: 100%
+  display: block
+  border: 1px solid #c5c5c5
+  border-radius: 4px
+  background-color: #e5e5e5
+  resize: none
+  height: 100px
+  padding: 15px
+  &:focus
+    border-color: $main
+  +fs(26)
+
+.textarea::-webkit-input-placeholder
+  color: #424242
+
+.textarea::-moz-placeholder
+  color: #424242
+
+.textarea:-ms-input-placeholder
+  color: #424242
+
+
+.main-block-third
+  .bottom-button
+    width: 100%
+    button
+      width: 100%
+
+  .step-top-title
+    margin-bottom: 10px
+    margin-top: 20px
+
+  .step-bottom-ttitle
+    margin-bottom: 15px
+
+  .input-form
+    padding-left: 15px
+    height: 41px
+
+.date-inputs
+  input
+    &:first-child
+      float: left
+      margin-right: 15px
+    width: 35%
+
+//.step-page-two
+//  .main-block-third
+//    position: static
+//    transform: translate(0)
+//    height: initial !important
+    
+.input-form.input-grey
+  border-radius: 0
+  background-color: #ededed
+  border: 0
+  width: 89%
+  float: right
+
+.input-wrapp
+  +clr
+  .icon
+    font-size: 25px
+    line-height: 35px
+
+
+.step-text
+  font-weight: 500
+  font-family: 'RobotoMediun'
+  color: #3d3d3d
+  margin-bottom: 36px
+  +fs(26)
+
+.summ-info
+  table-layout: fixed
+  .name
+    color: #565656
+    +fs(26)
+  .value-sum
+    color: $main-sec
+    +fs(26)
+
+
+.step-3
+  //height: initial !important
+  .you-balance
+    padding-bottom: 24px
+    +rh(480)
+      padding-bottom: 11px
+
+  .bottom-button
+    position: static
+    padding: 40px 0
+    -webkit-transform: translate(0)
+    -ms-transform: translate(0)
+    transform: translate(0)
+
+.step-last
+  .bottom-button
+    bottom: 8%
+
+  .icon-handshake
+    font-size: 70px
+    margin-bottom: 20px
+
+  .main-block-third
+    text-align: center
+    //padding-top: 35px
+
+  .title-red
+    font-weight: 400
+    +fs(32)
+    padding-bottom: 35px
+
+.deal-name, .port-name-title
+  +fs(22)
+  color: #3f3f3f
+
+.port-name,
+.deal-value
+  +fs(22)
+  color: $main
+
+.text-value
+  color: #6b6b6b
+  text-overflow: ellipsis
+  white-space: nowrap
+  overflow: hidden
+
+.step-deal-page
+  .bottom-button
+    width: 80%
+    margin: 0 auto
+
+
+.deal-info
+  table-layout: fixed
+  
+  td
+    text-align: left
+    padding-bottom: 10px
+
+.transfer-page
+  //height: initial !important
+  .step-top-title
+    margin-bottom: 15px !important
+
+  .bottom-button
+    width: 80%
+    margin: 0 auto
+
+.sum-transfer
+  +fs(22)
+  color: #6d6d6d
+
+.val-name
+  +fs(30)
+  color: $main
+  position: absolute
+  right: 0
+  bottom: 0
+  transform: translate(0, -50%)
+
+.value-block
+  position: relative
+
+.step-2
+  //+rh(600)
+  //  height: initial !important
+  .bottom-button
+    bottom: 8%
+
+
+.error-tr
+  width: 75%
+  margin-left: auto
+  margin-right: auto
+  margin-bottom: 0
+
+.tranfer-table
+  margin-bottom: 40px
+  td
+    padding-bottom: 5px
+
+.icon-send
+  font-size: 70px
+  margin-bottom: 12px
+
+.icon-coins
+  font-size: 70px
+  margin-bottom: 12px
+
+.header-lang
+  +fs(18)
+  color: white
+  font-weight: 400
+  display: inline-block
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+.lang
+  width: 60px
+
+
+.main-block
+  //position: static
+  //transform: translate(0)
+  margin-top: 40px
+
+
+  .title-red
+    margin-bottom: 15px
+
+
+
+.wrap-bg
+  position: relative
+  margin: 0 auto
+  top: 50%
+  transform: translateY(-50%)
+  +r(767)
+    position: static
+    transform: scale(1)
+
+  //overflow: hidden
+
+  //background-image: url(../img/bg.jpg)
+  //background-size: cover
+
+.phone
+  width: 900px
+  margin: 0 auto
+  //transform-origin: top center
+  +r(900)
+    width: 768px
+  +r(767)
+    transform: scale(1) !important
+    width: 100% !important
+  +rh(480)
+  img
+    +r(767)
+      display: none
+
+
+
+.wrap-bg .wrapper
+  position: absolute
+  left: 273px
+  transform: scale(0.78)
+  width: 360px
+  border: 0
+  top: 22px
+  +rm(768)
+    height: 629px !important
+    //overflow: scroll
+
+    
+
+  +r(900)
+    left: 207px
+    transform: scale(0.666)
+    width: 360px
+    border: 0
+    top: -28px
+
+  +r(767)
+    width: 100% !important
+    position: static
+    margin: 0
+    max-width: initial !important
+    transform: scale(1) !important
+
+
+.message
+  .textarea
+    background-color: white
+    margin-top: 20px
+
+.requisits
+  color: $main
+  +fs(20)
+  text-decoration: underline
+
+.sucess-page, .sucess-vust
+  .main-block
+    margin-top: 20%
+
+  .bottom-button
+    position: absolute
+    bottom: 30px
+    width: 100%
+    .button
+      display: inline
+
+  +rm(768)
+    overflow: hidden !important
+
+.main-page-wr
+  //+r(768)
+  //  overflow: hidden !important
+
+.without-panel
+  .info-block-wrapp
+    height: initial !important
+
+.icon-exchange
+  font-size: 57px
+
+.icon-atm
+  font-size: 50px
+
+.icon-delete
+  font-size: 57px
+
+.meassage
+  width: 90%
+  margin: 0 auto
+
+.profile-body
+  width: 90%
+  margin: 0 auto
+  padding-top: 25px
+  .input-form
+    margin-bottom: 10px
+
+  .step-top-title
+    margin-bottom: 20px
+
+.grey-input
+  background-color: #E0E0E0
+
+
+.list-of-currency
+  .step-top-title
+    margin: 10px 0
+    padding-left: 15px
+.list-of-currency
+  .icon-credit-card-, .icon-bank
+    font-size: 45px
+
+.bank-accounts
+  .add-ham
+    padding: 30px 0
+  .icon-add
+    font-size: 33px !important
+
+.delete-account
+
+  .icon-delete
+    font-size: 16px
+    vertical-align: middle
+    margin-right: 10px
+    padding: 15px 0
+
+.delete
+  text-align: center
+  margin: 15px 0
+  span
+    font-size: 16px
+    display: inline-block
+    color: black
+    vertical-align: middle
+
+.account
+  .bottom-button
+    padding-bottom: 0

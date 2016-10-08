@@ -1,0 +1,106 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="theme-color" content="#fff">
+    <link rel="stylesheet" media="all" href="css/style.css" >
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+</head>
+<body>
+
+<!-- BEGIN  out-->
+<div class="wrap-bg">
+    <!--s-->
+    <div class="phone">
+        <img src="img/phone.png" alt="">
+        <div class="wrapper transfer-page">
+            <header class="header">
+                <div class="top-header">
+                    <div class="back">
+                        <a href="#" class="back-button">
+                            <i class="icon icon-add-main"></i>
+                        </a>
+            
+                    </div>
+                    <!--<div class="lang">-->
+                        <!--<a href="#" class="back-button">-->
+                            <!--<a href="#" class="header-lang">EN</a>-->
+                        <!--</a>-->
+                    <!--</div>-->
+                    <div class="current-menu-item">Имя пользователя</div>
+                    <div class="signup">
+                        <a href="#" class="signup-button">
+                            <i class="icon icon-signup"></i>
+                        </a>
+                    </div>
+                </div>
+                <nav class="nav-header">
+                    <ul>
+                        <li><a class="active-link" href="#"><span>КОШЕЛЬКИ</span></a></li>
+                        <li><a href="#"><span>СООБЩЕНИЯ</span></a></li>
+                        <li><a href="#"><span>ПРОФИЛЬ</span></a></li>
+                        <li><a href="#"><span>СЧЕТА</span></a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <div class="main-second-block custom">
+                    <h1 class="step-top-title">Вывод средств</h1>
+                    <div class="step-text">Укажите сумму и счет/карту, для вывода
+                        средств с кошелька.</div>
+
+                    <table class="tranfer-table">
+                        <tr>
+                            <td class="port-name-title">Кошелек:</td>
+                            <td class="port-name">Название кошелька</td>
+                        </tr>
+                        <tr>
+                            <td class="port-name-title balans">Баланс:</td>
+                            <td class="port-name">0,00</td>
+                        </tr>
+                        <tr>
+                            <td class="port-name-title dostupno">Доступно:</td>
+                            <td class="port-name">0,00</td>
+                        </tr>
+                    </table>
+                    <div class="input-wrapp">
+                        <select class="input-form red-drop" name="currency" title="Выбирите валюту">
+                            <option selected="" value="Выберите валюту">Выберите счет или карту</option>
+                            <option value="EUR">EUR</option>
+                            <option value="USD">USD</option>
+                            <option value="RUB">RUB</option>
+                            <option value="UAH">UAH</option>
+                            <option value="CRT">CRT</option>
+                            <option value="BPT">BPT</option>
+                            <option value="GEL">GEL</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="main-second-block custom">
+                    <h2 class="sum-transfer">Сумма вывода:</h2>
+                    <div class="you-balance">
+                        <div class=" value-block">
+                            <span class="val">0,00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="error error-tr">Пожалуйста, введите сумму и укажите
+                    банковский счет для вывода средств.
+                </div>
+                <div class="bottom-button static">
+                    <button type="submit" class="button">ВЫВЕСТИ</button>
+                </div>
+            </main>
+        </div>
+
+    </div>
+</div>
+
+<!-- END out-->
+<script src="js/app.js"></script>
+</body>
+</html>

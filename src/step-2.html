@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="theme-color" content="#fff">
+    <link rel="stylesheet" media="all" href="css/style.css" >
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+</head>
+<body>
+
+<!-- BEGIN  out-->
+<div class="wrap-bg">
+    <!--s-->
+    <div class="phone">
+        <img src="img/phone.png" alt="">
+        <div class="wrapper step-page step-page-two">
+            //=include partials/header.html
+            <main>
+                <div class="main-block main-block-third">
+                    <h1 class="step-top-title">Подключить новый счет</h1>
+                    <h2 class="step-bottom-ttitle">Шаг 2</h2>
+                    <form action="" name="step-2">
+                        <div class="checkbox-wrap">
+                            <div class="check bank-account">
+                                <div class="content-check">
+                                    <i class="icon icon-bank"></i>
+                                    <span>Bank <br> account</span>
+                                    <input type="checkbox" style="
+    box-sizing: border-box;
+">
+                                </div>
+                            </div>
+                            <span class="divide">/</span>
+                            <div class="check credit-card">
+                                <div class="content-check">
+                                    <i class="icon icon-credit-card-"></i>
+                                    <span>Credit <br> card</span>
+                                    <input type="checkbox">
+                                </div>
+                            </div>
+                        </div>
+
+                        <input class="input-form type-second-input" style="margin-bottom: 8px;" placeholder="Номер" type="number" name="number">
+                        <div class="date-inputs">
+                            <input class="input-form type-second-input" placeholder="Месяц" type="text" name="mount">
+                            <input class="input-form type-second-input" placeholder="Год" type="number" name="year">
+                        </div>
+                        <input style="margin-bottom: 12px;" class="input-form type-second-input" placeholder="Имя владельца" type="text" name="name-client">
+                        <input style="margin-bottom: 18px;" class="input-form type-second-input" placeholder="Название банка" type="text" name="name-bank">
+
+                        <textarea placeholder="Дополнительная информация" class="textarea"></textarea>
+
+                        <div class="bottom-button small-button step-2">
+                            <button class="button" type="submit">ПОДТВЕРДИТЬ</button>
+                        </div>
+                    </form>
+
+
+                </div>
+            </main>
+        </div>
+    </div>
+</div>
+
+<!-- END out-->
+<script src="js/app.js"></script>
+</body>
+</html>

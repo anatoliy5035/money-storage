@@ -1,0 +1,69 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="theme-color" content="#fff">
+    <link rel="stylesheet" media="all" href="css/style.css" >
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+</head>
+<body>
+
+<!-- BEGIN  out-->
+<div class="wrap-bg">
+    <!--s-->
+    <div class="phone">
+        <img src="img/phone.png" alt="">
+        <div class="wrapper step-page step-1">
+            //=include partials/header.html
+            <main>
+                <div class="main-block main-block-third">
+                    <h1 class="step-top-title">Подключить новый счет</h1>
+                    <h2 class="step-bottom-ttitle">Шаг 1</h2>
+
+                    <form action="" name="step-1">
+                        <input style="padding-left: 15px;" class="input-form type-second-input" placeholder="Название" type="text" name="name">
+                        <div class="warning-text">
+                            <i class="icon icon-warning"></i>
+                            Use some customary name to select payment details
+                            easily. For example, "my card for withdrawals."
+                        </div>
+
+                        <select style="background-image: url(img/ukrain.svg);" class="input-form custom-drop country-drop" name="currency" title="Выбирите валюту">
+                            <!--<option selected="" value="Выберите валюту">Выберите страну</option>-->
+                            <option selected="" value="UAH">Ukraine</option>
+                            <option value="USD">USA</option>
+                            <option value="RUB">Russia</option>
+                            <option value="UAH">China</option>
+                        </select>
+
+                        <select class="input-form custom-drop" name="currency" title="Выбирите валюту">
+                            <option selected="" value="Выберите валюту">Выберите валюту</option>
+                            <option value="EUR">EUR</option>
+                            <option value="USD">USD</option>
+                            <option value="RUB">RUB</option>
+                            <option value="UAH">UAH</option>
+                            <option value="CRT">CRT</option>
+                            <option value="BPT">BPT</option>
+                            <option value="GEL">GEL</option>
+                        </select>
+
+                        <div class="bottom-button small-button">
+                            <button class="button" type="submit" >ДАЛЬШЕ</button>
+                        </div>
+                    </form>
+
+
+                </div>
+            </main>
+        </div>
+    </div>
+</div>
+
+<!-- END out-->
+<script src="js/app.js"></script>
+</body>
+</html>
