@@ -6,18 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <meta name="theme-color" content="#fff">
-    <link rel="stylesheet" media="all" href="css/style.css" >
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" media="all" href="css/style.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script>
 </head>
 <body>
 
 <!-- BEGIN  out-->
-<div class="wrap-bg">
+<div class="wrap-bg pc-bg">
+
+    <div class="preloader-wrapper active">
+        <div class="spinner-layer spinner-red-only">
+            <div class="circle-clipper left">
+                <div class="circle"></div>
+            </div>
+        </div>
+    </div>
     <!--s-->
     <div class="phone">
-        <img src="img/phone.png" alt="">
+        <!--<img src="img/phone.png" alt="">-->
         <!--<iframe scrolling="no" class="" src="http://ms2.vis-design.com/" style=""></iframe>-->
-        <div style="" class="wrapper portmone-info-page with-panel">
+        <div style="" class="wrapper pc-bg portmone-info-page with-panel">
             <header class="header">
                 <div class="top-header">
                     <div class="back">
@@ -40,10 +49,10 @@
                 </div>
                 <nav class="nav-header">
                     <ul>
-                        <li><a class="active-link" href="#"><span>КОШЕЛЬКИ</span></a></li>
-                        <li><a href="#"><span>СООБЩЕНИЯ</span></a></li>
-                        <li><a href="#"><span>ПРОФИЛЬ</span></a></li>
-                        <li><a href="#"><span>СЧЕТА</span></a></li>
+                        <li><a class="active-link" href="get-money-submit.html"><span>Кошельки</span></a></li>
+                        <li><a href="account-info.html"><span>Сделки</span></a></li>
+                        <li><a href="balans.html"><span>Сообщения</span></a></li>
+                        <li><a href="portmone-info-with-panel.html"><span>Профиль</span></a></li>
                     </ul>
                 </nav>
             </header>
@@ -55,7 +64,7 @@
                         </h1>
                         <table class="port-info">
                             <tr>
-                                <td class="grey-title" style="width: 35%">
+                                <td class="grey-title td-small-width-2">
                                     <span>Название:</span>
                                 </td>
                                 <td class="value-info name-port-info">
@@ -108,7 +117,7 @@
                             <table class="history to">
                                 <tr>
                                     <td rowspan="2" class="ico">
-                                        <i class="ico-history ico-to"></i>
+                                        <i class="ico-history ico-transfer-h"></i>
                                     </td>
                                     <td>
                                         <span class="name-company">To: Rozetka.ua</span>
@@ -125,7 +134,7 @@
                                         <span class="action">Выслана сума</span>
                                     </td>
                                     <td class="date">
-                                        <span >2.01.2016</span>
+                                        <span>2.01.2016</span>
                                     </td>
                                 </tr>
                             </table>
@@ -135,11 +144,12 @@
                                     <td rowspan="2" class="ico">
                                         <i class="ico-history ico-add-portmone"></i>
                                     </td>
+
                                     <td>
                                         <span class="name-company">From: Privat Bank</span>
                                     </td>
                                     <td class="history-value">
-                                        <div >
+                                        <div>
                                             <span>+100,00</span>
                                             <span class="type">EUR</span>
                                         </div>
@@ -150,7 +160,7 @@
                                         <span class="action">Кошелек пополнен</span>
                                     </td>
                                     <td class="date">
-                                        <span >2.01.2016</span>
+                                        <span>2.01.2016</span>
                                     </td>
                                 </tr>
                             </table>
@@ -163,7 +173,7 @@
                                         <span class="name-company">Название кошелька</span>
                                     </td>
                                     <td class="history-value">
-                                        <div >
+                                        <div>
                                             <span>0,00</span>
                                             <span class="type">EUR</span>
                                         </div>
@@ -174,7 +184,7 @@
                                         <span class="action">Выслана сума</span>
                                     </td>
                                     <td class="date">
-                                        <span >2.01.2016</span>
+                                        <span>2.01.2016</span>
                                     </td>
                                 </tr>
                             </table>
@@ -187,7 +197,7 @@
                                         <span class="name-company">To: Rozetka.ua</span>
                                     </td>
                                     <td class="history-value">
-                                        <div >
+                                        <div>
                                             <span>-10,00</span>
                                             <span class="type">EUR</span>
                                         </div>
@@ -198,20 +208,20 @@
                                         <span class="action">Выслана сума</span>
                                     </td>
                                     <td class="date">
-                                        <span >2.01.2016</span>
+                                        <span>2.01.2016</span>
                                     </td>
                                 </tr>
                             </table>
                             <table class="history to">
                                 <tr>
                                     <td rowspan="2" class="ico">
-                                        <i class="ico-history ico-fill"></i>
+                                        <i class="ico-history ico-get-commission"></i>
                                     </td>
                                     <td>
                                         <span class="name-company">To: Rozetka.ua</span>
                                     </td>
                                     <td class="history-value">
-                                        <div >
+                                        <div>
                                             <span>-10,00</span>
                                             <span class="type">EUR</span>
                                         </div>
@@ -222,7 +232,7 @@
                                         <span class="action">Выслана сума</span>
                                     </td>
                                     <td class="date">
-                                        <span >2.01.2016</span>
+                                        <span>2.01.2016</span>
                                     </td>
                                 </tr>
                             </table>
@@ -231,6 +241,11 @@
                             <button class="navigate-button later"><i class="icon icon-tri"></i>Позже</button>
                             <button class="navigate-button early">Раньше<i class="icon icon-tri"></i></button>
                         </div>
+                    </div>
+                    <div class="hstory-button-wrap">
+                        <button class="button">
+                            История
+                        </button>
                     </div>
                 </div>
                 <table class="bottom-panel">

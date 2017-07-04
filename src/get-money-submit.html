@@ -8,15 +8,23 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="theme-color" content="#fff">
     <link rel="stylesheet" media="all" href="css/style.css" >
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script>
 </head>
 <body>
 
 <!-- BEGIN  out-->
-<div class="wrap-bg">
+<div class="wrap-bg pc-bg">
     <!--s-->
+    <div class="preloader-wrapper active">
+        <div class="spinner-layer spinner-red-only">
+            <div class="circle-clipper left">
+                <div class="circle"></div>
+            </div>
+        </div>
+    </div>
     <div class="phone">
-        <img src="img/phone.png" alt="">
+        <!--<img src="img/phone.png" alt="">-->
         <div class="wrapper step-page step-last">
             //=include partials/header.html
             <main>
@@ -40,7 +48,7 @@
 
                 </div>
                 <div class="bottom-button static small-button">
-                    <button style="background-color: #d8d8d8; margin-bottom: 15px; color: #636363" class="button" type="submit">РЕДАКТИРОВАТЬ</button>
+                    <button style=" " class="button grey-button" type="submit">РЕДАКТИРОВАТЬ</button>
                     <button class="button" type="submit">ПОДТВЕРДИТЬ</button>
                 </div>
             </main>

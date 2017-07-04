@@ -3,12 +3,12 @@ var rimraf = require('rimraf');
 var config = require('../config');
 
 gulp.task('watch', [
-    'sprite:watch',
+    // 'sprite:watch',
     'sass:watch',
     'copy:watch',
     // 'pug:watch',
     'html:watch',
-    'font:watch',
+    // 'font:watch',
     'js:watch'
 ]);
 

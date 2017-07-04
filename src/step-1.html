@@ -8,15 +8,16 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="theme-color" content="#fff">
     <link rel="stylesheet" media="all" href="css/style.css" >
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script>
 </head>
 <body>
 
 <!-- BEGIN  out-->
-<div class="wrap-bg">
+<div class="wrap-bg pc-bg">
     <!--s-->
     <div class="phone">
-        <img src="img/phone.png" alt="">
+        <!--<img src="img/phone.png" alt="">-->
         <div class="wrapper step-page step-1">
             //=include partials/header.html
             <main>
@@ -25,19 +26,20 @@
                     <h2 class="step-bottom-ttitle">Шаг 1</h2>
 
                     <form action="" name="step-1">
-                        <input style="padding-left: 15px;" class="input-form type-second-input" placeholder="Название" type="text" name="name">
+                        <input class="left-off-1 input-form type-second-input" placeholder="Название" type="text" name="name">
                         <div class="warning-text">
                             <i class="icon icon-warning"></i>
                             Use some customary name to select payment details
                             easily. For example, "my card for withdrawals."
                         </div>
 
-                        <select style="background-image: url(img/ukrain.svg);" class="input-form custom-drop country-drop" name="currency" title="Выбирите валюту">
+                        <select class="input-form custom-drop" name="country" title="Выбирите валюту">
                             <!--<option selected="" value="Выберите валюту">Выберите страну</option>-->
-                            <option selected="" value="UAH">Ukraine</option>
+                            <option data-iconurl="img/ukrain.svg" selected="" value="UAH">Ukraine</option>
                             <option value="USD">USA</option>
                             <option value="RUB">Russia</option>
-                            <option value="UAH">China</option>
+                            <option value="CH">China</option>
+                            <option value="LN">Canada</option>
                         </select>
 
                         <select class="input-form custom-drop" name="currency" title="Выбирите валюту">

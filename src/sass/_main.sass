@@ -1,18 +1,6 @@
 // Normally mainpage styles
 
 
-  
-//
-//.bg-desktop
-//  background: url(../img/single_hand_bg.png)
-//  -webkit-background-size: cover
-//  background-size: cover
-//  width: 723px
-//  height: 707px
-//  left: 50%
-//  position: absolute
-//  transform: translate(-270px,0)
-
 .main-page-wr
   background: #E0EEEF
 
@@ -24,20 +12,24 @@
   padding-right: 15px
 
   button
-    padding: 14px 16%
+    padding: 9px 16%
+    display: inline-block
+    height: 44px
 
 .main-logo
-  width: 80%
   margin: 0 auto
   margin-bottom: 30px
-  +r(480)
-    width: 75%
-
+  max-width: 520px
+  height: auto
   +r(320)
     margin-bottom: 15px
   img
+    width: 80%
     margin: 0 auto
-    display: block !important
+    display: block
+    height: auto
+    +r(480)
+      width: 75%
 
 
 .sign-block
@@ -80,14 +72,15 @@
   background: $main
   text-transform: uppercase
   color: white
+  &:hover
+    background: $main-sec
+    
   +fs(18)
   padding: 18px 16%
   text-align: center
   border-radius: 6px
   +r(480)
     +fs(18)
-  //+rh(480)
-  //  padding: 8px 16%
 
 .icon-shield:before
   font-size: 30px
@@ -184,10 +177,10 @@
     color: white
     +fs(18)
     text-transform: uppercase
-    padding: 0 20px
-    +r(480)
-      +fs(16)
-      padding: 0 6px
+    max-width: 89px
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
     +r(320)
       +fs(16)
 
@@ -216,19 +209,25 @@
     width: 90%
   +rh(480)
 
+body>.add-ham
+  +r(768)
+    position: absolute
+    //bottom: 6%
+    left: 50%
+    width: 80%
+    text-align: center
+    transform: translate(-50%)
+    bottom: 8%
+    +rh(480)
+      bottom: 3%
 
-
+.sucess-page .add-ham,
+.transfer-page .add-ham
+  text-align: center
+  padding: 80px 0
 
 .add-ham
-  position: absolute
-  bottom: 6%
-  left: 50%
-  width: 80%
   text-align: center
-  transform: translate(-50%)
-  +rh(480)
-    bottom: 3%
-
   a
     color: $main
     +fs(24)
@@ -244,23 +243,23 @@
   +rh(480)
     font-size: 35px
 
+.pc-bg .sucess-page .bottom-button
+  position: absolute
+  left: 0
+  right: 0
+  bottom: 8%
+
+.pc-bg .sucess-vust .bottom-button
+  position: absolute
+  left: 0
+  right: 0
+  bottom: 8%
 
 .bottom-button
   margin: 0 auto
   text-align: center
   padding-top: 59px
   padding-bottom: 26px
-
-
-//.static
-//  transform: translate(0)
-//  position: static
-
-.bottom-button
-  &.static
-    padding: 47px 0
-
-
   +rh(548)
     position: static
     padding: 40px 0
@@ -301,6 +300,10 @@ option
   border: 0
   border-bottom: 4px solid $main
   color: darkgrey
+  background: white !important
+  height: 50px !important
+  .selectboxit-text
+    line-height: 50px !important
 
 .red-drop
   color: $main
@@ -329,52 +332,53 @@ option
 .icon-sucess
   font-size: 75px
   margin-bottom: 40px
-  +rh(480)
+  +rh(640)
     margin-bottom: 20px
 
 .currency-page, .bank-accounts
   .add-ham
     width: 100%
-    left: 0
-    bottom: 0
     padding: 40px 0
-    transform: translate(0)
-    position: fixed
     +rh(480)
       padding: 20px 0px
 
 
 .currency-ico
-  font-size: 50px
+  font-size: 45px
+
+.pc-bg .list-of-currency
+  //height: calc(629px - 215px) !important
+
+.list-of-currency,
+.list-of-deals
+  //overflow-y: scroll
+  //height: calc(100vh - 233px)
+  //+rh(480)
+  //  height: calc(100vh - 193px)
 
 
-.list-of-currency
-  padding-left: 72px
-  padding-right: 71px
-  overflow-y: scroll
-  height: calc(100vh - 233px)
-  +rh(480)
-    height: calc(100vh - 193px)
-  +r(768)
-    height: calc(629px - 233px)
   li
-    display: block
-    padding-left: 80px
-    padding-right: 100px
-    height: 100px
+    padding-top: 10px
+    padding-bottom: 10px
+    overflow: hidden
+    padding-left: 63px
+    padding-right: 111px
+    min-height: 100px
     position: relative
     background-color: white
     margin-bottom: 9px
+    display: flex
+    align-items: center
     +vertical
     box-shadow: 0px 1px 9px -3px rgba(124, 125, 125, 0.68)
-    +rh(480)
-      height: 70px
+
 .currency-ico
-  color: $main
+  color: #D71F27
   position: absolute
   top: 50%
-  left: 20px
+  left: 10px
   transform: translate(0,-50%)
+
   +rh(480)
     font-size: 40px
 
@@ -384,25 +388,27 @@ option
   left: 0
   right: 0
   top: 0
+  z-index: 50
   +r(767)
 
 
 
 .currency-page, .bank-accounts
-  //height: initial !important
   .add-ham
     background: #F2F2F2
     z-index: 500
+    text-align: center
     +rh(480)
-
 
 
 .name-currency
   display: inline-block
-  vertical-align: middle
   line-height: 1.2
+  text-align: left
 
-.value
+
+.value,
+.right-ico-deal
   position: absolute
   top: 50%
   right: 15px
@@ -415,13 +421,22 @@ option
 
   .cur-name
     display: inline-block
+    font-size: 12px
 
 .name-currency
-  +fs(24)
+  +fs(23)
+
+.list-of-currency .value
+  text-align: right
+
+.list-of-currency .value span
+  display: block
+  margin-right: 0
+  margin-bottom: 4px
 
 .main-second-block
   margin-top: 8px
-  box-shadow: 0px 3px 12px -2px rgba(124, 126, 125, 0.68)
+  box-shadow: 0px 3px 12px -5px rgba(124, 126, 125, 0.68)
   background: white
   padding: 34px 0 17px 0
   +clr
@@ -453,14 +468,15 @@ option
 
   +fs(24)
 
-.you-balance
+.you-balance,
+.transfer-amount
   text-align: center
   padding-top: 24px
   +rh(480)
     padding-top: 11px
 
   .value-block
-    &.dost
+    &.available
       .val
         +fs(40)
       .currency-name
@@ -474,12 +490,23 @@ option
       font-weight: 400
       margin-right: 6px
       color: $main-sec
-      +fs(100)
+      display: block
+      text-align: center
+      +fs(48)
+      width: 100%
+      &.active
+        padding-right: 83px
+
       +rh(480)
         font-size: 5.14rem
     span
       display: inline-block
       color: $main-sec
+      top: 50%
+
+.you-balance .val
+  font-size: 5.5rem !important
+  padding-right: 0 !important
 
 
 .small-title
@@ -518,9 +545,9 @@ option
   right: 0
   background: white
   table-layout: fixed
-  +r(320)
+  +rh(640)
     position: static
-    margin-top: 40px
+    //margin-top: 40px
 
   .link
     text-align: center
@@ -552,30 +579,32 @@ option
 .info-block-wrapp
   overflow-y: scroll
   +rh(480)
+    overflow: initial
     overflow: auto
     //height: initial
 
 
 
 .with-panel
-  overflow: hidden !important
-  +rh(480)
-    overflow: scroll !important
+  //overflow: hidden
+  +rh(640)
+    overflow-y: scroll
 
 
 .with-panel .info-block-wrapp
-  +rh(480)
+  +rh(640)
     height: inherit !important
-    overflow: initial
+    overflow: auto
 
 .with-panel .bottom-panel
-  position: fixed
-  margin-top: 0
-  bottom: 15px !important
-  //display: none
-  +rh(480)
+  +r(767)
     position: static
-    margin-top: 40px
+  +rh(640)
+    position: static
+
+.mobile-bg .with-panel .bottom-panel
+  position: static
+    //margin-top: 40px
 
     //height: 165px
 
@@ -607,7 +636,7 @@ option
     +fs(18)
     color: #474747
   td
-    vertical-align: middle
+    vertical-align: top
 
 .history-wrap
   margin-right: 15px
@@ -631,13 +660,13 @@ option
   height: 50px
   display: block
   background-position: center center
-  //background-image: url(../img/send.png)
   background-size: contain
   margin: 0 auto
   background-repeat: no-repeat
 
 
-.ico-to
+
+.ico-transfer-h
   background-image: url(../img/transfer.svg)
 .ico-add-portmone
   background-image: url(../img/add-portmone.svg)
@@ -647,21 +676,19 @@ option
   background-image: url(../img/exchange.svg)
 .ico-fill
   background-image: url(../img/fill.svg)
-.ico-get-commision
-  background-image: url(../img/transfer.svg)
 .ico-get-money
   background-image: url(../img/get-money.svg)
-.ico-return-commision
+
+.ico-get-commission
+  background-image: url(../img/get-commission.svg)
+
+.ico-return-commission
   background-image: url(../img/return-commision.svg)
-.ico-transfer
-  background-image: url(../img/transfer.svg)
 .ico-transfer-send
   background-image: url(../img/transfer-send.svg)
-.ico--vust
+.ico-vust
   background-image: url(../img/vust.svg)
 
-    
-  
 
 .nav-buttons
   display: flex
@@ -707,6 +734,9 @@ option
 .name-company
   +fs(22)
   color: #474747
+  width: 100%
+  display: block
+  word-wrap: break-word
 
 .action
   +fs(18)
@@ -737,14 +767,13 @@ td.ico
     //  //margin-top: 35px
     //  transform: translate(0)
 
-    button
+    button, a
       width: 90%
 
 .main-block-third
   width: 90%
   top: 132px
   text-align: left
-
   +rh(480)
     position: static
     transform: translate(0)
@@ -807,6 +836,7 @@ td.ico
   +fs(18)
   padding-left: 26px
   margin-bottom: 35px
+  text-align: left
 
 .icon-warning
   font-size: 20px
@@ -817,21 +847,21 @@ td.ico
 .country-drop
   background-repeat: no-repeat
   background-size: 26px
-  background-position: 13px 5px
+  background-position: 13px 10px
   padding-left: 40px !important
 
 .type-input
   &:focus
     background: transparent
 
-.type-input:focus::-webkit-input-placeholder
-  color: transparent
-
-.type-input:focus::-moz-placeholder
-  color: transparent
-
-.type-input:focus::-ms-input-placeholder
-  color: transparent
+//input:focus::-webkit-input-placeholder
+//  color: transparent
+//
+//input:focus::-moz-placeholder
+//  color: transparent
+//
+//input:focus::-ms-input-placeholder
+//  color: transparent
 
 .input-form:focus::-webkit-input-placeholder
   color: transparent
@@ -991,9 +1021,10 @@ td.ico
   +fs(26)
 
 .summ-info
-  table-layout: fixed
+  //table-layout: fixed
   .name
     color: #565656
+    padding-right: 10px
     +fs(26)
   .value-sum
     color: $main-sec
@@ -1002,7 +1033,8 @@ td.ico
 
 .step-3
   //height: initial !important
-  .you-balance
+  .you-balance,
+  .transfer-amount
     padding-bottom: 24px
     +rh(480)
       padding-bottom: 11px
@@ -1042,9 +1074,6 @@ td.ico
 
 .text-value
   color: #6b6b6b
-  text-overflow: ellipsis
-  white-space: nowrap
-  overflow: hidden
 
 .step-deal-page
   .bottom-button
@@ -1058,6 +1087,8 @@ td.ico
   td
     text-align: left
     padding-bottom: 10px
+    word-wrap: break-word
+    padding-right: 6px
 
 .transfer-page
   //height: initial !important
@@ -1073,7 +1104,7 @@ td.ico
   color: #6d6d6d
 
 .val-name
-  +fs(30)
+  +fs(25)
   color: $main
   position: absolute
   right: 0
@@ -1139,7 +1170,9 @@ td.ico
   margin: 0 auto
   top: 50%
   transform: translateY(-50%)
+  -moz-transform: translateY(-50%)
   +r(767)
+  &.mobile-bg
     position: static
     transform: scale(1)
 
@@ -1148,21 +1181,79 @@ td.ico
   //background-image: url(../img/bg.jpg)
   //background-size: cover
 
+.pc-bg .phone
+  visibility: hidden
+
+.phone
+  background-image: url(../img/phone.png)
+  height: 752px
+  background-size: cover
+  +r(768)
+    background-image: none
+    transform: scale(1) !important
+    width: 100% !important
+    height: initial
+    height: auto
+
+.mobile-bg .phone
+  background-image: none
+  transform: scale(1) !important
+  width: 100% !important
+  height: initial
+  height: auto
+    
+.phone-left
+  background-image: url(../img/main.png)
+  height: 860px
+  background-size: contain
+  background-repeat: no-repeat
+  background-position: 0 50%
+  +r(767)
+    background-image: none
+    transform: scale(1) !important
+    width: 100% !important
+    display: none
+
+.mobile-bg .phone
+  transform: scale(1) !important
+  width: 100% !important
+  background-image: none
+  height: initial
+  height: auto
+
+.mobile-bg .phone-left
+  transform: scale(1) !important
+  width: 100% !important
+  background-image: none
+  display: none
+
 .phone
   width: 900px
   margin: 0 auto
-  //transform-origin: top center
-  +r(900)
-    width: 768px
+  //+r(900)
+  //  width: 768px
+  //+r(767)
+
+  //img
+  //  +r(767)
+  //    display: none
+
+.wrapper
   +r(767)
-    transform: scale(1) !important
     width: 100% !important
-  +rh(480)
-  img
-    +r(767)
-      display: none
+    position: static !important
+    margin: 0 !important
+    max-width: initial !important
+    max-width: auto !important
+    transform: scale(1) !important
 
-
+.mobile-bg .wrapper
+  width: 100% !important
+  position: static !important
+  margin: 0 !important
+  max-width: initial !important
+  max-width: auto !important
+  transform: scale(1) !important
 
 .wrap-bg .wrapper
   position: absolute
@@ -1170,27 +1261,27 @@ td.ico
   transform: scale(0.78)
   width: 360px
   border: 0
-  top: 22px
-  +rm(768)
-    height: 629px !important
+  top: 21px
+  //+rm(769)
+  //  height: 629px !important
     //overflow: scroll
+.main-page-wr
+  display: block !important
 
-    
+.pc-bg .wrapper
+  //display: none
+  height: 629px !important
+  //+r(900)
+  //  left: 207px
+  //  transform: scale(0.666)
+  //  width: 360px
+  //  border: 0
+  //  top: -28px
 
-  +r(900)
-    left: 207px
-    transform: scale(0.666)
-    width: 360px
-    border: 0
-    top: -28px
-
-  +r(767)
-    width: 100% !important
-    position: static
-    margin: 0
-    max-width: initial !important
-    transform: scale(1) !important
-
+.wrapper
+  +rm(922)
+    //display: none
+    height: 629px !important
 
 .message
   .textarea
@@ -1205,16 +1296,20 @@ td.ico
 .sucess-page, .sucess-vust
   .main-block
     margin-top: 20%
+    +rh(640)
+      margin-top: 11%
 
   .bottom-button
-    position: absolute
-    bottom: 30px
-    width: 100%
+    //+rm(769)
+    //  position: absolute
+    //  bottom: 30px
+    //  width: 100%
     .button
       display: inline
 
   +rm(768)
-    overflow: hidden !important
+    //overflow: hidden !important
+
 
 .main-page-wr
   //+r(768)
@@ -1223,6 +1318,7 @@ td.ico
 .without-panel
   .info-block-wrapp
     height: initial !important
+    height: auto !important
 
 .icon-exchange
   font-size: 57px
@@ -1251,13 +1347,15 @@ td.ico
   background-color: #E0E0E0
 
 
-.list-of-currency
+.list-of-currency,
+.list-of-deals
   .step-top-title
     margin: 10px 0
     padding-left: 15px
 .list-of-currency
   .icon-credit-card-, .icon-bank
     font-size: 45px
+
 
 .bank-accounts
   .add-ham
@@ -1285,3 +1383,213 @@ td.ico
 .account
   .bottom-button
     padding-bottom: 0
+
+.offset-mb
+  margin-bottom: 20px !important
+
+.offset-mb-8
+  margin-bottom: 8px !important
+
+.offset-mb-15
+  margin-bottom: 15px
+
+.offset-mb-12
+  margin-bottom: 12px !important
+
+.offset-mb-18
+  margin-bottom: 18px !important
+
+.textarea-message
+  height: 200px
+
+.td-small-width
+  width: 31%
+
+.td-small-width-2
+  width: 35%
+
+
+.offset-top
+  padding-top: 15px
+  margin-bottom: 0 !important
+
+.red-drop
+  color: #FF0000
+
+.grey-button
+  background-color: #c6d8d1
+  margin-bottom: 15px !important
+  color: #636363
+  &:hover
+    background-color: #d2d8d6 !important
+    color: #636363 !important
+
+.left-off-1
+  padding-left: 15px
+
+.hstory-button-wrap
+  text-align: center
+  padding-top: 20px
+  padding-bottom: 20px
+
+
+.val::-webkit-input-placeholder
+  color: $main
+
+.val::-moz-placeholder
+  color: $main
+
+.val:-ms-input-placeholder
+  color: $main
+
+
+.val:focus::-webkit-input-placeholder
+  color: transparent !important
+
+
+
+.val:focus:-moz-placeholder
+  color: transparent !important
+
+
+.val:focus::-moz-placeholder
+  color: transparent !important
+
+
+
+.val:focus:-ms-input-placeholder
+  color: transparent !important
+
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+  -webkit-appearance: none
+  margin: 0
+
+.val.no-offset
+  padding-right: 0 !important
+
+.main-page-wrap
+  +rh(610)
+    transform: translate(0)
+    position: static
+  .phone-left
+    width: 50%
+    margin: 0
+    float: left
+    transform-origin: left
+    height: 634px
+    +rm(1600)
+      height: 767px
+
+    //transform: translateY(25%)
+
+.main-page-wrap
+  .main-page-wr
+    +rm(768)
+      transform: scale(1)
+      position: static
+      transform-origin: top
+    //width: 50%
+
+.main-page-wrap
+  +clr
+
+.selectboxit-container
+  width: 100% !important
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  display: block !important
+  margin-bottom: 14px !important
+
+.selectboxit
+  width: 100% !important
+
+.selectboxit-options
+  width: 100% !important
+
+input[type=number]::-webkit-outer-spin-button
+  -webkit-appearance: none
+  margin: 0
+
+input[type=number]
+  -moz-appearance: textfield
+
+.selectboxit-container span,
+.selectboxit-container .selectboxit-options a
+  line-height: 40px
+  height: 40px
+
+.selectboxit-option-icon-url
+  height: 40px !important
+  width: 30px !important
+
+.selectboxit-container .selectboxit-options a
+  height: 40px
+
+.selectboxit-option-icon-url
+  background-size: 26px 20px !important
+
+.right-ico-deal
+  .ico
+    font-size: 45px
+    color: #D71F27
+
+.list-of-deals li
+  padding-right: 79px
+
+.icon-envelope
+  font-size: 19px !important
+
+
+.selectboxit-container .selectboxit-options
+  max-height: 322px !important
+
+body.consruct-page
+  background-image: none
+  overflow: auto
+  +r(800)
+    background: #e0eeef !important
+
+.construct-wrap
+  max-width: 400px
+  margin: 0 auto
+  text-align: center
+  position: absolute
+  left: 50%
+  top: 40%
+  transform: translate(-50%, -50%)
+  +r(767)
+    left: 15px
+    right: 15px
+    transform: translateY(-50%)
+  +rh(510)
+    position: relative
+    transform: translate(0)
+    left: 0
+    top: 0
+    margin: 58px auto
+  .icon
+    font-size: 45px
+    margin-bottom: 24px
+
+.time-construct-text
+  font-size: 16px
+
+.logo-constr
+  bottom: 80px
+  left: 50%
+  transform: translate(-50%, -50%)
+  position: absolute
+  +rh(510)
+    position: relative
+    margin: 15px 0
+    transform: translate(0)
+    left: 0
+    top: 0
+  img
+    margin: 0 auto
+    max-width: 180px
+

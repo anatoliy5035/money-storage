@@ -13,10 +13,10 @@
 <body >
 
 <!-- BEGIN  out-->
-<div class="wrap-bg">
+<div class="wrap-bg pc-bg">
     <!--s-->
     <div class="phone">
-        <img src="img/phone.png" alt="">
+        <!--<img src="img/phone.png" alt="">-->
 
         <div class="wrapper step-deal-page step-3">
             //=include partials/header.html
@@ -28,7 +28,7 @@
                         Укажите валюту и сумму, которую Вы
                         хотите получить.
                     </div>
-                    <select style="color: #FF0000" class="input-form custom-drop" name="currency" title="Выбирите валюту">
+                    <select class="input-form custom-drop red-drop" name="currency" title="Выбирите валюту">
                         <option selected="" value="Выберите валюту">Выберите валюту</option>
                         <option value="EUR">EUR</option>
                         <option value="USD">USD</option>
@@ -38,9 +38,9 @@
                         <option value="BPT">BPT</option>
                         <option value="GEL">GEL</option>
                     </select>
-                    <div class="you-balance">
+                    <div class="transfer-amount">
                         <div class=" value-block">
-                            <span class="val">0,00</span>
+                            <input class="val no-offset" placeholder="0,00" type="number">
                         </div>
                     </div>
                     <textarea placeholder="Описание" class="textarea"></textarea>

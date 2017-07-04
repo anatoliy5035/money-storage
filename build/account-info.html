@@ -8,16 +8,25 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="theme-color" content="#fff">
     <link rel="stylesheet" media="all" href="css/style.css" >
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script>
 </head>
 <body >
 
 <!-- BEGIN  out-->
-<div class="wrap-bg">
+<div class="wrap-bg pc-bg">
+    <div class="preloader-wrapper active">
+        <div class="spinner-layer spinner-red-only">
+            <div class="circle-clipper left">
+                <div class="circle"></div>
+            </div>
+        </div>
+    </div>
+
     <!--s-->
     <div class="phone">
-        <img src="img/phone.png" alt="">
-        <div class="wrapper profile account">
+        <!--<img src="img/phone.png" alt="">-->
+        <div class="wrapper  profile account">
             <header class="header">
                 <div class="top-header">
                     <div class="back">
@@ -40,10 +49,10 @@
                 </div>
                 <nav class="nav-header">
                     <ul>
-                        <li><a class="active-link" href="#"><span>КОШЕЛЬКИ</span></a></li>
-                        <li><a href="#"><span>СООБЩЕНИЯ</span></a></li>
-                        <li><a href="#"><span>ПРОФИЛЬ</span></a></li>
-                        <li><a href="#"><span>СЧЕТА</span></a></li>
+                        <li><a class="active-link" href="get-money-submit.html"><span>Кошельки</span></a></li>
+                        <li><a href="account-info.html"><span>Сделки</span></a></li>
+                        <li><a href="balans.html"><span>Сообщения</span></a></li>
+                        <li><a href="portmone-info-with-panel.html"><span>Профиль</span></a></li>
                     </ul>
                 </nav>
             </header>
@@ -52,13 +61,13 @@
                     <h1 class="step-top-title">Информация о счете</h1>
                     <form name="profile" action="">
                         <input class="input-form type-second-input" placeholder="Название" type="text" name="name">
-                        <select style="background-image: url(img/ukrain.svg);" class="input-form custom-drop country-drop" name="currency" title="Выбирите валюту">
-                            <option selected="" value="UAH">Ukraine</option>
+                        <select  class="input-form custom-drop" name="currency" title="Выбирите валюту">
+                            <option data-iconurl="img/ukrain.svg" selected="" value="UAH">Ukraine</option>
                             <option value="USD">USA</option>
                             <option value="RUB">Russia</option>
-                            <option value="UAH">China</option>
+                            <option value="CN">China</option>
                         </select>
-                        <select style="margin-bottom: 20px" class="input-form custom-drop" name="currency" title="EUR">
+                        <select  class="input-form custom-drop offset-mb" name="currency" title="EUR">
                             <option selected="" value="EUR">EUR</option>
                             <option value="EUR">EUR</option>
                             <option value="USD">USD</option>
@@ -68,8 +77,8 @@
                             <option value="BPT">BPT</option>
                             <option value="GEL">GEL</option>
                         </select>
-                        <input class="input-form type-second-input" style="margin-bottom: 8px;" placeholder="Номер" type="number" name="number">
-                        <div style="margin-bottom: 20px" class="date-inputs">
+                        <input class="input-form type-second-input offset-mb-8"  placeholder="Номер" type="number" name="number">
+                        <div class="date-inputs offset-mb">
                             <input class="input-form type-second-input" placeholder="Месяц" type="text" name="mount">
                             <input class="input-form type-second-input" placeholder="Год" type="number" name="year">
                         </div>
@@ -95,6 +104,7 @@
 </div>
 
 <!-- END out-->
+
 <script src="js/app.js"></script>
 </body>
 </html>

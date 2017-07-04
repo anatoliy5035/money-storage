@@ -5,52 +5,65 @@
 	font-weight: normal
 	font-style: normal
 
-$icon-Cararat_slash: "\EA01"
-$icon-Georgian_Lari: "\EA02"
-$icon-add-main: "\EA03"
-$icon-add-portmone: "\EA04"
-$icon-add: "\EA05"
-$icon-atm: "\EA06"
-$icon-avatar: "\EA07"
-$icon-back_arrow: "\EA08"
-$icon-bank: "\EA09"
-$icon-book: "\EA0A"
+$icon-add-main: "\EA01"
+$icon-add-portmone: "\EA02"
+$icon-add: "\EA03"
+$icon-atm: "\EA04"
+$icon-avatar: "\EA05"
+$icon-back_arrow: "\EA06"
+$icon-bank: "\EA07"
+$icon-bitcoin: "\EA08"
+$icon-book: "\EA09"
+$icon-cancel_circle: "\EA0A"
 $icon-checkbox: "\EA0B"
 $icon-checked: "\EA0C"
 $icon-coins: "\EA0D"
 $icon-credit-card-: "\EA0E"
 $icon-credit-card: "\EA0F"
 $icon-credit-cards: "\EA10"
-$icon-deal: "\EA11"
-$icon-delete: "\EA12"
-$icon-dollar-symbol: "\EA13"
-$icon-envelope: "\EA14"
-$icon-euro-currency-symbol: "\EA15"
-$icon-exchange: "\EA16"
-$icon-fill: "\EA17"
-$icon-get-commision: "\EA18"
-$icon-get-money: "\EA19"
-$icon-get: "\EA1A"
-$icon-handshake: "\EA1B"
-$icon-information: "\EA1C"
-$icon-logout: "\EA1D"
-$icon-pencil-edit-button: "\EA1E"
-$icon-pencil: "\EA1F"
-$icon-return-commision: "\EA20"
-$icon-ruble-currency-sign: "\EA21"
-$icon-send: "\EA22"
-$icon-shield: "\EA23"
-$icon-signature: "\EA24"
-$icon-signup: "\EA25"
-$icon-sucess: "\EA26"
-$icon-transfer-send: "\EA27"
-$icon-transfer: "\EA28"
-$icon-tri: "\EA29"
-$icon-ukrain: "\EA2A"
-$icon-ukraine-hryvna: "\EA2B"
-$icon-vust: "\EA2C"
-$icon-wallet: "\EA2D"
-$icon-warning: "\EA2E"
+$icon-crt: "\EA11"
+$icon-deal: "\EA12"
+$icon-delete: "\EA13"
+$icon-ec-crt: "\EA14"
+$icon-ec-eur: "\EA15"
+$icon-ec-kzt: "\EA16"
+$icon-ec-mdl: "\EA17"
+$icon-ec-pln: "\EA18"
+$icon-ec-rub: "\EA19"
+$icon-ec-uah: "\EA1A"
+$icon-ec-usd: "\EA1B"
+$icon-envelope: "\EA1C"
+$icon-eur: "\EA1D"
+$icon-exchange: "\EA1E"
+$icon-georgian: "\EA1F"
+$icon-get-commision: "\EA20"
+$icon-get-money: "\EA21"
+$icon-get: "\EA22"
+$icon-handshake: "\EA23"
+$icon-information: "\EA24"
+$icon-logout: "\EA25"
+$icon-mdl: "\EA26"
+$icon-pencil-edit-button: "\EA27"
+$icon-pencil: "\EA28"
+$icon-pln: "\EA29"
+$icon-pm_eur: "\EA2A"
+$icon-pm_usd: "\EA2B"
+$icon-return-commision: "\EA2C"
+$icon-rub: "\EA2D"
+$icon-sand-clock: "\EA2E"
+$icon-send: "\EA2F"
+$icon-shield: "\EA30"
+$icon-signature: "\EA31"
+$icon-signup: "\EA32"
+$icon-sucess: "\EA33"
+$icon-transfer-send: "\EA34"
+$icon-transfer: "\EA35"
+$icon-tri: "\EA36"
+$icon-uah: "\EA37"
+$icon-usd: "\EA38"
+$icon-vust: "\EA39"
+$icon-wallet: "\EA3A"
+$icon-warning: "\EA3B"
 
 
 %icon
@@ -67,10 +80,6 @@ $icon-warning: "\EA2E"
 	@extend %icon
 	display: inline-block
 
-.icon-Cararat_slash:before
-	content: $icon-Cararat_slash
-.icon-Georgian_Lari:before
-	content: $icon-Georgian_Lari
 .icon-add-main:before
 	content: $icon-add-main
 .icon-add-portmone:before
@@ -85,8 +94,12 @@ $icon-warning: "\EA2E"
 	content: $icon-back_arrow
 .icon-bank:before
 	content: $icon-bank
+.icon-bitcoin:before
+	content: $icon-bitcoin
 .icon-book:before
 	content: $icon-book
+.icon-cancel_circle:before
+	content: $icon-cancel_circle
 .icon-checkbox:before
 	content: $icon-checkbox
 .icon-checked:before
@@ -99,20 +112,36 @@ $icon-warning: "\EA2E"
 	content: $icon-credit-card
 .icon-credit-cards:before
 	content: $icon-credit-cards
+.icon-crt:before
+	content: $icon-crt
 .icon-deal:before
 	content: $icon-deal
 .icon-delete:before
 	content: $icon-delete
-.icon-dollar-symbol:before
-	content: $icon-dollar-symbol
+.icon-ec-crt:before
+	content: $icon-ec-crt
+.icon-ec-eur:before
+	content: $icon-ec-eur
+.icon-ec-kzt:before
+	content: $icon-ec-kzt
+.icon-ec-mdl:before
+	content: $icon-ec-mdl
+.icon-ec-pln:before
+	content: $icon-ec-pln
+.icon-ec-rub:before
+	content: $icon-ec-rub
+.icon-ec-uah:before
+	content: $icon-ec-uah
+.icon-ec-usd:before
+	content: $icon-ec-usd
 .icon-envelope:before
 	content: $icon-envelope
-.icon-euro-currency-symbol:before
-	content: $icon-euro-currency-symbol
+.icon-eur:before
+	content: $icon-eur
 .icon-exchange:before
 	content: $icon-exchange
-.icon-fill:before
-	content: $icon-fill
+.icon-georgian:before
+	content: $icon-georgian
 .icon-get-commision:before
 	content: $icon-get-commision
 .icon-get-money:before
@@ -125,14 +154,24 @@ $icon-warning: "\EA2E"
 	content: $icon-information
 .icon-logout:before
 	content: $icon-logout
+.icon-mdl:before
+	content: $icon-mdl
 .icon-pencil-edit-button:before
 	content: $icon-pencil-edit-button
 .icon-pencil:before
 	content: $icon-pencil
+.icon-pln:before
+	content: $icon-pln
+.icon-pm_eur:before
+	content: $icon-pm_eur
+.icon-pm_usd:before
+	content: $icon-pm_usd
 .icon-return-commision:before
 	content: $icon-return-commision
-.icon-ruble-currency-sign:before
-	content: $icon-ruble-currency-sign
+.icon-rub:before
+	content: $icon-rub
+.icon-sand-clock:before
+	content: $icon-sand-clock
 .icon-send:before
 	content: $icon-send
 .icon-shield:before
@@ -149,10 +188,10 @@ $icon-warning: "\EA2E"
 	content: $icon-transfer
 .icon-tri:before
 	content: $icon-tri
-.icon-ukrain:before
-	content: $icon-ukrain
-.icon-ukraine-hryvna:before
-	content: $icon-ukraine-hryvna
+.icon-uah:before
+	content: $icon-uah
+.icon-usd:before
+	content: $icon-usd
 .icon-vust:before
 	content: $icon-vust
 .icon-wallet:before

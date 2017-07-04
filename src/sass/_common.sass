@@ -1,8 +1,18 @@
 
-@import 'https://fonts.googleapis.com/css?family=Roboto:400,500,700'
 @font-face
   font-family: RobotoMediun
   src: url(fonts/Roboto-Medium.ttf)
+  font-weight: 500
+
+@font-face
+  font-family: RobotoRegular
+  src: url(fonts/Roboto-Regular.ttf)
+  font-weight: 400
+
+@font-face
+  font-family: RobotoBold
+  src: url(fonts/Roboto-Bold.ttf)
+  font-weight: 700
 
 html
   font-size: 10px
@@ -19,10 +29,35 @@ body
   font-family: 'Roboto', sans-serif
   overflow: hidden
   min-width: 320px
-  background: #e0eeef
-  +r(768)
-    //overflow: auto !important
+  background-color: #e0eeef
+  background-image: url(../img/logo-main.svg)
+  background-repeat: no-repeat
+  background-size: 20%
+  background-position: 50px 50px
+  +r(800)
+    background-image: none
+    background-color: #F2F2F2
+    overflow: initial
+    overflow: initial
+    overflow: auto
+    position: relative
 
+body>.bottom-button .button
+  +r(800)
+    display: inline
+
+body>.bottom-button
+  +r(800)
+    position: absolute
+    bottom: 6%
+    left: 0
+    right: 0
+  +rh(767)
+    position: static
+.main
+  background-image: none
+  overflow: auto
+  background-color: #E0EEEF !important
 
 // common blocks
 $main-sec: #BB0000
@@ -39,10 +74,17 @@ main
   margin: 0 auto
   position: relative
   background: #F2F2F2
-  //overflow-y: scroll
-  //+rm(767)
-  //  overflow: scroll
+  height: 100vh
+  overflow-x: hidden
+  overflow-y: initial
+  overflow-y: auto
+  +r(768)
+    height: initial
+    height: auto
 
+.mobile-bg .wrapper
+  height: initial
+  height: auto
 
 a
   display: block
@@ -115,8 +157,6 @@ img
 //  +r(767)
 //    //overflow: hidden
 
-.wrapper
-  overflow: auto
 
 input, select, textarea
   box-sizing: border-box
